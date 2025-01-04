@@ -5,6 +5,7 @@ const Experiments = () => {
     <table className="table-auto rounded-md border-2 border-indigo-600 bg-white text-black">
       <thead>
         <tr>
+          <th>Experiment</th>
           <th>Test case</th>
           <th>LLM</th>
           <th>Performance</th>
@@ -18,7 +19,7 @@ const Experiments = () => {
           <td>Adam</td>
           <td>858</td>
         </tr>
-        <tr className="">
+        <tr>
           <td>
             A Long and Winding Tour of the History of UI Frameworks and Tools
             and the Impact on Design
