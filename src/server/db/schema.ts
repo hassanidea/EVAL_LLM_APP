@@ -18,11 +18,16 @@ import {
  */
 export const createTable = pgTableCreator((name) => `db_hassan_${name}`);
 
-export const posts = createTable(
-  "post",
+export const experiments = createTable(
+  "experiment",
   {
     id: integer("id").primaryKey().generatedByDefaultAsIdentity(),
     name: varchar("name", { length: 256 }),
+    prompt: varchar("prompt"),
+    llm: varchar("llm", { length: 256 }),
+    performance: varchar("performance", { length: 256 }),
+    accuracy: varchar("accuracy", { length: 256 }),
+    relevancy: varchar("relevancy", { length: 256 }),
     createdAt: timestamp("created_at", { withTimezone: true })
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),

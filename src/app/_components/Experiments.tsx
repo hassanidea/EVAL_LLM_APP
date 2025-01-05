@@ -1,12 +1,17 @@
 import React from "react";
 
-const Experiments = () => {
+import { db } from "~/server/db";
+import Exp_row from "./Exp_row";
+
+const Experiments = async () => {
+  const experiments = await db.query.experiments.findMany();
+
   return (
     <table className="table-auto rounded-md border-2 border-indigo-600 bg-white text-black">
       <thead>
         <tr>
           <th>Experiment</th>
-          <th>Test case</th>
+          <th>Propmt</th>
           <th>LLM</th>
           <th>Performance</th>
           <th>Accuracy</th>
@@ -14,24 +19,16 @@ const Experiments = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Intro to CSS</td>
-          <td>Adam</td>
-          <td>858</td>
-        </tr>
-        <tr>
-          <td>
-            A Long and Winding Tour of the History of UI Frameworks and Tools
-            and the Impact on Design
-          </td>
-          <td>Adam</td>
-          <td>112</td>
-        </tr>
-        <tr>
-          <td>Intro to JavaScript</td>
-          <td>Chris</td>
-          <td>1,280</td>
-        </tr>
+        {experiments.map((experiment) => (
+          <tr key={experiment.id}>
+            <td>{experiment.name}</td>
+            <td>{experiment.prompt}</td>
+            <td>{experiment.llm}</td>
+            <td>{experiment.performance}</td>
+            <td>{experiment.accuracy}</td>
+            <td>{experiment.relevancy}</td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );
