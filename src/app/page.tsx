@@ -11,9 +11,6 @@ export default async function HomePage() {
   return (
     <main className="flex flex-col items-start justify-center p-4 text-white">
       <Form />
-      {/* {experiments.map((experiment) => (
-        <div key={experiment.id}>{experiment.name}</div>
-      ))} */}
       <Experiments />
     </main>
   );

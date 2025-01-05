@@ -1,7 +1,6 @@
 import React from "react";
 
 import { db } from "~/server/db";
-import Exp_row from "./Exp_row";
 
 const Experiments = async () => {
   const experiments = await db.query.experiments.findMany();
@@ -11,7 +10,7 @@ const Experiments = async () => {
       <thead>
         <tr>
           <th>Experiment</th>
-          <th>Propmt</th>
+          <th>Prompt</th>
           <th>LLM</th>
           <th>Performance</th>
           <th>Accuracy</th>
