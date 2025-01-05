@@ -72,7 +72,10 @@ const Form = () => {
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button className="border-black-100 bg-white text-black">
+            <Button
+              variant="outline"
+              className="border-black-100 bg-white text-black"
+            >
               Choose LLM
             </Button>
           </DropdownMenuTrigger>

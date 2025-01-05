@@ -25,8 +25,8 @@ export const experiments = createTable(
     name: varchar("name", { length: 256 }),
     prompt: varchar("prompt"),
     llm: varchar("llm", { length: 256 }),
-    performance: varchar("performance", { length: 256 }),
-    accuracy: varchar("accuracy", { length: 256 }),
+    alignment: varchar("alignment", { length: 256 }),
+    correctness: varchar("correctness", { length: 256 }),
     relevancy: varchar("relevancy", { length: 256 }),
     createdAt: timestamp("created_at", { withTimezone: true })
       .default(sql`CURRENT_TIMESTAMP`)

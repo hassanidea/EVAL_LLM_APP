@@ -12,8 +12,8 @@ const Experiments = async () => {
           <th>Experiment</th>
           <th>Prompt</th>
           <th>LLM</th>
-          <th>Performance</th>
-          <th>Accuracy</th>
+          <th>Correctness</th>
+          <th>Prompt Alignment</th>
           <th>Relevancy</th>
         </tr>
       </thead>
@@ -23,8 +23,8 @@ const Experiments = async () => {
             <td>{experiment.name}</td>
             <td>{experiment.prompt}</td>
             <td>{experiment.llm}</td>
-            <td>{experiment.performance}</td>
-            <td>{experiment.accuracy}</td>
+            <td>{experiment.correctness}</td>
+            <td>{experiment.alignment}</td>
             <td>{experiment.relevancy}</td>
           </tr>
         ))}
