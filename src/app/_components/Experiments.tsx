@@ -2,6 +2,8 @@ import React from "react";
 
 import { db } from "~/server/db";
 
+export const dynamic = "force-dynamic";
+
 const Experiments = async () => {
   const experiments = await db.query.experiments.findMany();
 
