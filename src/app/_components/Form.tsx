@@ -95,11 +95,8 @@ const Form = () => {
                   <DropdownMenuRadioItem value="llama-3.3-70b-versatile">
                     llama-3.3-70b-versatile
                   </DropdownMenuRadioItem>
-                  <DropdownMenuRadioItem value="gemma2-9b-it">
-                    gemma2-9b-it
-                  </DropdownMenuRadioItem>
-                  <DropdownMenuRadioItem value="mixtral-8x7b-32768">
-                    mixtral-8x7b-32768
+                  <DropdownMenuRadioItem value="meta-llama/llama-guard-4-12b">
+                    meta-llama/llama-guard-4-12b
                   </DropdownMenuRadioItem>
                 </DropdownMenuRadioGroup>
               </DropdownMenuContent>

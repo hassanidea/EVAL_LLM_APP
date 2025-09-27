@@ -38,7 +38,7 @@ export const getTestCases = async (message: Message) => {
     ],
 
     // The language model which will generate the completion.
-    model: "gemma2-9b-it",
+    model: "meta-llama/llama-guard-4-12b",
   });
 };
 
@@ -88,7 +88,7 @@ export const getMetric = async (
         content: answers,
       },
     ],
-    model: "llama-3.1-70b-versatile",
+    model: "llama-3.3-70b-versatile",
   });
 
   return completion.choices[0]?.message.content;
