@@ -65,7 +65,7 @@ const Form = () => {
               ></input>
             </div>
             <div className="w-1/4">
-              <p>Sytem Prompt to be Evaluated</p>
+              <p>System Prompt to be Evaluated</p>
             </div>
             <div className="w-3/4">
               <input
@@ -95,8 +95,8 @@ const Form = () => {
                   <DropdownMenuRadioItem value="llama-3.3-70b-versatile">
                     llama-3.3-70b-versatile
                   </DropdownMenuRadioItem>
-                  <DropdownMenuRadioItem value="meta-llama/llama-guard-4-12b">
-                    meta-llama/llama-guard-4-12b
+                  <DropdownMenuRadioItem value="openai/gpt-oss-20b">
+                    openai/gpt-oss-20b
                   </DropdownMenuRadioItem>
                 </DropdownMenuRadioGroup>
               </DropdownMenuContent>

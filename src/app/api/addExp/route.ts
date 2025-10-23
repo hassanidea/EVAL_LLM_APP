@@ -18,10 +18,14 @@ export async function POST(req: Request) {
     await getTestCases(data)
   ).choices[0]?.message?.content;
 
+  console.log(testCases);
+
   // get answers based on these test cases from specified LLM
   const answers: any = await (
     await getAnswers(data, testCases)
   ).choices[0]?.message?.content;
+
+  console.log(answers);
 
   // get Correctness score
   const correctness = await getMetric(data, answers, correctnessPrompt);

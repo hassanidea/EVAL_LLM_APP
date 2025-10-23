@@ -38,7 +38,7 @@ export const getTestCases = async (message: Message) => {
     ],
 
     // The language model which will generate the completion.
-    model: "meta-llama/llama-guard-4-12b",
+    model: "openai/gpt-oss-120b",
   });
 };
 
@@ -88,7 +88,7 @@ export const getMetric = async (
         content: answers,
       },
     ],
-    model: "llama-3.3-70b-versatile",
+    model: "openai/gpt-oss-120b",
   });
 
   return completion.choices[0]?.message.content;
